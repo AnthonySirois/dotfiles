@@ -20,47 +20,27 @@ fail() {
     exit
 }
 
-setup_gitconfig() {
-    if ! [ -f git/gitconfig.local.symlink ]; then
-        info 'setup gitconfig'
-
-        git_credential='cache'
-        if [ "$(uname -s)" == "Darwin" ]; then
-            git_credential='osxkeychain'
-        fi
-
-        user ' - What is your github author name?'
-        read -e git_authorname
-        user ' - What is your github author email?'
-        read -e git_authoremail
-
-        sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.local.symlink.example >git/gitconfig.local.symlink
-
-        success 'gitconfig'
-    fi
-}
-
 link_file() {
     local src=$1 dst=$2
 
     local overwrite= backup= skip=
     local action=
 
-    if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
+    if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; 
+    then
 
-        if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]; then
+        if [ "$overwrite_all" = false ] && [ "$backup_all" = false ] && [ "$skip_all" = false ]; then
 
             local currentSrc="$(readlink $dst)"
 
-            if [ "$currentSrc" == "$src" ]; then
-
+            if [ "$currentSrc" = "$src" ];
+            then
                 skip=true
-
             else
 
                 user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
                 [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
-                read -n 1 action
+                read action
 
                 case "$action" in
                 o)
@@ -83,29 +63,33 @@ link_file() {
                     ;;
                 *) ;;
                 esac
+
             fi
+
         fi
 
         overwrite=${overwrite:-$overwrite_all}
         backup=${backup:-$backup_all}
         skip=${skip:-$skip_all}
 
-        if [ "$overwrite" == "true" ]; then
+        if [ "$overwrite" = true ]; then
             rm -rf "$dst"
             success "removed $dst"
         fi
 
-        if [ "$backup" == "true" ]; then
+        if [ "$backup" = true ];
+        then
             mv "$dst" "${dst}.backup"
             success "moved $dst to ${dst}.backup"
         fi
 
-        if [ "$skip" == "true" ]; then
+        if [ "$skip" = true ];
+        then
             success "skipped $src"
         fi
     fi
 
-    if [ "$skip" != "true" ]; then # "false" or empty
+    if [ "$skip" != true ]; then # "false" or empty
         ln -s "$1" "$2"
         success "linked $1 to $2"
     fi
@@ -116,27 +100,12 @@ install_dotfiles() {
 
     local overwrite_all=false backup_all=false skip_all=false
 
-    #
-    for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*'); do
+    for src in $(find -H "$DOTFILES_ROOT" -maxdepth 3 -name '*.symlink'); do
         dst="$HOME/.$(basename "${src%.*}")"
         link_file "$src" "$dst"
     done
 }
 
-setup_gitconfig
 install_dotfiles
 
-echo ''
-echo '  All installed!'
-
-# ln -s ~/dotfiles/.config/zsh/.zshrc ~/.zshrc
-# ln -s ~/dotfiles/.config/zsh/powerlevel10k/.p10k.zsh ~/.p10k.zsh
-# ln -s ~/dotfiles/.config/alacritty/alacritty.toml ~/.alacritty.toml
-
-# apt install
-
-# Install plugins
-# https://github.com/zsh-users/zsh-autosuggestions
-# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# https://github.com/zsh-users/zsh-syntax-highlighting
-# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+echo 'All installed!'

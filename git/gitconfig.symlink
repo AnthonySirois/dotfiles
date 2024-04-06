@@ -1,0 +1,16 @@
+[user]
+        email = anthonysirois999@gmail.com
+        name = Anthony Sirois
+[init]
+        defaultBranch = main
+[color]
+        ui = true
+[core]
+        editor = code --wait
+        autocrlf = input
+[diff]
+        tool = vscode
+[diff "vscode"]
+        cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "vscode"]
+        cmd = code --wait $MERGED
