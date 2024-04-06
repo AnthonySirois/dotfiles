@@ -1,0 +1,46 @@
+# Default colors
+[colors.primary]
+background = '#12121f'
+foreground = '#d4d7ff'
+
+# Normal colors
+[colors.normal]
+black = '#12121f'
+red = '#de688a'
+green = '#8fe0b4'
+yellow = '#fdf5b0'
+blue = '#83a8ec'
+magenta = '#8983d8'
+cyan = '#89e6e4'
+white = '#d4d7ff'
+
+# Bright colors (same as normal colors)
+[colors.bright]
+black = '#4f5071'
+red = '#d74770'
+green = '#6fd89e'
+yellow = '#fcf39c'
+blue = '#729ce9'
+magenta = '#7a73d3'
+cyan = '#65dedc'
+white = '#cccfff'
+
+[colors.hints.end]
+foreground = "#cccfff"
+
+[font]
+size = 12
+
+[font.normal]
+family = "Hack Nerd Font"
+
+[shell]
+program = "/bin/zsh"
+
+[window]
+opacity = 0.9
+decorations = "full"
+
+[window.padding]
+x = 5
+y = 5
