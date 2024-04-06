@@ -1,0 +1,3 @@
+function tre() {
+    tree -aC -I '.git|node_modules' --dirsfirst  "$@" | less -FRNX;
+}

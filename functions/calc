@@ -1,0 +1,7 @@
+function calc() {
+    for input in "$@"
+    do
+        result=$(echo "scale=2;$input" | bc)
+        echo "$result"
+    done
+}
