@@ -2,6 +2,17 @@
 
 This repository is a work in progress!
 
+## Programs
+
+- OS: Ubuntu
+- Terminal: [Alacritty](https://github.com/alacritty/alacritty)
+- Shell: [ZSH](https://www.zsh.org)
+- WM: [i3](https://i3wm.org)
+- Title bar: [polybar](https://github.com/polybar/polybar)
+
+- Misc
+  - [polybar-spotify-module](https://github.com/mihirlad55/polybar-spotify-module)
+
 ## Customization
 
 - Font : Hack Nerd Font
@@ -13,3 +24,5 @@ This repository is a work in progress!
 - [Zach Holman's dotfiles](https://github.com/holman/dotfiles)
   - Structure
   - Install script
+- [Vallen217's dotfiles](https://github.com/Vallen217/dotfiles)
+  - Initial configurations for i3 & polybar
