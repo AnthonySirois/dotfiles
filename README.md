@@ -9,6 +9,7 @@ This repository is a work in progress!
 - Shell: [ZSH](https://www.zsh.org)
 - WM: [i3](https://i3wm.org)
 - Status bar: [polybar](https://github.com/polybar/polybar)
+- Application Launcher: [rofi](https://github.com/davatorium/rofi)
 
 - Misc
   - [polybar-spotify-module](https://github.com/mihirlad55/polybar-spotify-module)
@@ -23,6 +24,7 @@ This repository is a work in progress!
 - Font : Hack Nerd Font
   - [Website](https://www.nerdfonts.com)
   - [Zip](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.0/Hack.zip)
+- Icons : [Kora](https://github.com/bikass/kora)
 
 ## References
 
