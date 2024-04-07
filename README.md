@@ -16,6 +16,7 @@ This repository is a work in progress!
   - [flameshot](https://flameshot.org)
   - [eww](https://github.com/elkowar/eww)
   - [i3lock-color](https://github.com/Raymo111/i3lock-color)
+  - [picom](https://github.com/yshui/picom)
 
 ## Customization
 
