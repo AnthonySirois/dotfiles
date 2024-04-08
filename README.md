@@ -10,8 +10,11 @@ This repository is a work in progress!
 - WM: [i3](https://i3wm.org)
 - Status bar: [polybar](https://github.com/polybar/polybar)
 - Application Launcher: [rofi](https://github.com/davatorium/rofi)
+- Notifications: [dunst](https://github.com/dunst-project/dunst)
 
 - Misc
+  - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+  - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
   - [polybar-spotify-module](https://github.com/mihirlad55/polybar-spotify-module)
   - [nitrogen](https://github.com/l3ib/nitrogen/)
   - [flameshot](https://flameshot.org)

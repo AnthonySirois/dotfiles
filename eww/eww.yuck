@@ -20,7 +20,7 @@
 			:suspend "systemctl suspend"
 			:logout "loginctl kill-session self"
 			:reboot "systemctl reboot"
-			:shutdown "systemctl shutdown"
+			:shutdown "systemctl poweroff -i"
 			:lockscreen_icon ""
 			:suspend_icon "󰖔"
 			:logout_icon "󰍃"
