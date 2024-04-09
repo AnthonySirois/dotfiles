@@ -21,6 +21,7 @@ This repository is a work in progress!
   - [eww](https://github.com/elkowar/eww)
   - [i3lock-color](https://github.com/Raymo111/i3lock-color)
   - [picom](https://github.com/yshui/picom)
+  - [bottom](https://github.com/ClementTsang/bottom)
 
 ## Customization
 

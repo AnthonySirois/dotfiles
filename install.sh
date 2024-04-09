@@ -111,6 +111,7 @@ install_dotfiles() {
     link_file "$DOTFILES_ROOT/i3" "$CONFIG_ROOT/i3"
     link_file "$DOTFILES_ROOT/polybar" "$CONFIG_ROOT/polybar"
     link_file "$DOTFILES_ROOT/rofi" "$CONFIG_ROOT/rofi"
+    link_file "$DOTFILES_ROOT/bottom" "$CONFIG_ROOT/bottom"
     link_file "$DOTFILES_ROOT/gtk-2.0" "$CONFIG_ROOT/gtk-2.0"
     link_file "$DOTFILES_ROOT/gtk-3.0" "$CONFIG_ROOT/gtk-3.0"
     link_file "$DOTFILES_ROOT/gtk-4.0" "$CONFIG_ROOT/gtk-4.0"
