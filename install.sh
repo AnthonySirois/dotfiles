@@ -1,4 +1,5 @@
 DOTFILES_ROOT=$(pwd -P)
+CONFIG_ROOT=${XDG_CONFIG_HOME:-"$HOME/.config"}
 
 set -e
 
@@ -104,6 +105,12 @@ install_dotfiles() {
         dst="$HOME/.$(basename "${src%.*}")"
         link_file "$src" "$dst"
     done
+
+    # TODO Find a better way to link folders to .config
+    link_file "$DOTFILES_ROOT/eww" "$CONFIG_ROOT/eww"
+    link_file "$DOTFILES_ROOT/i3" "$CONFIG_ROOT/i3"
+    link_file "$DOTFILES_ROOT/polybar" "$CONFIG_ROOT/polybar"
+    link_file "$DOTFILES_ROOT/rofi" "$CONFIG_ROOT/rofi"
 }
 
 install_dotfiles
