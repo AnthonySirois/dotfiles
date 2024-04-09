@@ -181,9 +181,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-assign [class="Discord"] $ws8
-assign [class="Steam"] $ws9
-assign [class="Spotify"] $ws10
+assign [class="opera"] $ws1
+assign [class="discord"] $ws6
+assign [class="steam"] $ws9
+assign [class="spotify"] $ws10
 
 set $main_screen DP-2
 set $off_screen DP-5
