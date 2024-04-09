@@ -11,10 +11,9 @@ font pango:Hack Nerd Font 11
 
 # Autostart
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id "~/.dotfiles/polybar/polybar-start.sh"
+exec --no-startup-id "$HOME/.dotfiles/polybar/polybar-start.sh"
 exec --no-startup-id picom --config ~/.picom.conf
-exec --no-startup-id dunst --config "~/.dotfiles/dunst/dunstrc"
-exec --no-startup-id "setxkbmap -layout us,ca -option grp:win_space_toggle"
+exec --no-startup-id dunst --config "$HOME/.dotfiles/dunst/dunstrc"
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -101,9 +100,9 @@ bindsym $mod+e layout toggle split
 # bindsym $mod+space focus mode_toggle
 
 # eww power-menu
-bindsym $mod+Shift+p exec "~/tools/eww/target/release/eww open powermenu"
+bindsym $mod+Shift+p exec "$HOME/tools/eww/target/release/eww open powermenu"
 # TODO: implement seamless way to exit eww windows
-bindsym $mod+Ctrl+p exec "~/tools/eww/target/release/eww close powermenu"
+bindsym $mod+Ctrl+p exec "$HOME/tools/eww/target/release/eww close powermenu"
 
 # focus the parent container
 bindsym $mod+a focus parent

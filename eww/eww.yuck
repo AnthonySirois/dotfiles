@@ -16,7 +16,7 @@
 (defwidget powermenu_layout []
 	(box :class "powermenu_layout-box"
 		(_powermenu
-			:lockscreen "~/.dotfiles/system/lock.sh"
+			:lockscreen "$HOME/.dotfiles/system/lock.sh"
 			:suspend "systemctl suspend"
 			:logout "loginctl kill-session self"
 			:reboot "systemctl reboot"
@@ -45,14 +45,14 @@
 		:halign "center"
 		:space-evenly true
 		(button :class "lockscreen_button"
-			:onclick "~/tools/eww/target/release/eww close powermenu && ${lockscreen}" lockscreen_icon)
+			:onclick "$HOME/tools/eww/target/release/eww close powermenu && ${lockscreen}" lockscreen_icon)
 		(button :class "suspend_button"
-			:onclick "~/tools/eww/target/release/eww close powermenu && ${suspend} ; ${lockscreen}" suspend_icon)
+			:onclick "$HOME/tools/eww/target/release/eww close powermenu && ${suspend} ; ${lockscreen}" suspend_icon)
 		(button :class "logout_button"
-			:onclick "~/tools/eww/target/release/eww close powermenu && ${logout}" logout_icon)
+			:onclick "$HOME/tools/eww/target/release/eww close powermenu && ${logout}" logout_icon)
 		(button :class "reboot_button"
-			:onclick "~/tools/eww/target/release/eww close powermenu && ${reboot}" reboot_icon)
+			:onclick "$HOME/tools/eww/target/release/eww close powermenu && ${reboot}" reboot_icon)
 		(button :class "shutdown_button"
-			:onclick "~/tools/eww/target/release/eww close powermenu && ${shutdown}" shutdown_icon)
+			:onclick "$HOME/tools/eww/target/release/eww close powermenu && ${shutdown}" shutdown_icon)
 	)
 ) 

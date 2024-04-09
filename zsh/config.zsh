@@ -1,6 +1,6 @@
-fpath=(~/.dotfiles/functions $fpath)
+fpath=($HOME/.dotfiles/functions $fpath)
 
-autoload -U ~/.dotfiles/functions/*(:t)
+autoload -U $HOME/.dotfiles/functions/*(:t)
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/

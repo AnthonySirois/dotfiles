@@ -1,1 +1,1 @@
-fpath+=${ZDOTDIR:-~}/.zsh_functions
+fpath+=${ZDOTDIR:-$HOME}/.zsh_functions
