@@ -108,6 +108,7 @@ install_dotfiles() {
 
     # TODO Find a better way to link folders to .config
     link_file "$DOTFILES_ROOT/eww" "$CONFIG_ROOT/eww"
+    link_file "$DOTFILES_ROOT/alacritty" "$CONFIG_ROOT/alacritty"
     link_file "$DOTFILES_ROOT/i3" "$CONFIG_ROOT/i3"
     link_file "$DOTFILES_ROOT/polybar" "$CONFIG_ROOT/polybar"
     link_file "$DOTFILES_ROOT/rofi" "$CONFIG_ROOT/rofi"

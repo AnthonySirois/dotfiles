@@ -29,6 +29,7 @@ This repository is a work in progress!
   - [Website](https://www.nerdfonts.com)
   - [Zip](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.0/Hack.zip)
 - Icons : [Kora](https://github.com/bikass/kora)
+- Theme : [Catppuccin](https://github.com/catppuccin/catppuccin)
 
 ## References
 
