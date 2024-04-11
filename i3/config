@@ -101,11 +101,8 @@ bindsym $mod+e layout toggle split
 # change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
 
-# eww power-menu
-# bindsym $mod+Shift+p exec "$HOME/tools/eww/target/release/eww open powermenu"
+# rofi power-menu
 bindsym $mod+p exec "$HOME/.config/rofi/bin/powermenu"
-# TODO: implement seamless way to exit eww windows
-bindsym $mod+Ctrl+p exec "$HOME/tools/eww/target/release/eww close powermenu"
 
 # focus the parent container
 bindsym $mod+a focus parent
