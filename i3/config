@@ -50,8 +50,8 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (rofi)
-bindsym $mod+d exec "rofi -modi drun -show drun"
-bindsym $mod+Shift+d exec "rofi -modi filebrowser -show filebrowser"
+bindsym $mod+d exec "$HOME/.config/rofi/bin/launcher"
+bindsym $mod+Shift+d exec "$HOME/.config/rofi/bin/runner"
 
 # change focus
 bindsym $mod+h focus left
@@ -102,7 +102,8 @@ bindsym $mod+e layout toggle split
 # bindsym $mod+space focus mode_toggle
 
 # eww power-menu
-bindsym $mod+Shift+p exec "$HOME/tools/eww/target/release/eww open powermenu"
+# bindsym $mod+Shift+p exec "$HOME/tools/eww/target/release/eww open powermenu"
+bindsym $mod+p exec "$HOME/.config/rofi/bin/powermenu"
 # TODO: implement seamless way to exit eww windows
 bindsym $mod+Ctrl+p exec "$HOME/tools/eww/target/release/eww close powermenu"
 

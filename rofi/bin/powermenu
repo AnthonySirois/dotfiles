@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+rofi_command="rofi -theme $HOME/.config/rofi/config/powermenu.rasi"
+
+uptime=$(uptime -p | sed -e 's/up //g')
+
+# Options
+if [[ "$DIR" == "powermenus" ]]; then
+	shutdown="󰐥"
+	reboot="󰜉"
+	lock=""
+	suspend="󰖔"
+	logout="󰍃"
+	ddir="$HOME/.config/rofi/config"
+else
+	# Buttons
+	layout=`cat $HOME/.config/rofi/config/powermenu.rasi | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
+	if [[ "$layout" == "TRUE" ]]; then
+		shutdown="󰐥"
+		reboot="󰜉"
+		lock="󰌾"
+		suspend="󰖔"
+		logout="󰍃"
+	else
+		shutdown="󰐥 Shutdown"
+		reboot="󰜉 Restart"
+		lock="󰌾 Lock"
+		suspend="󰖔 Sleep"
+		logout="󰍃 Logout"
+	fi
+	ddir="$HOME/.config/rofi/config"
+fi
+
+# Ask for confirmation
+rdialog () {
+	confirm="󰄬"
+	cancel="󰜺"
+
+	chosen="$(echo -e "$confirm\n$cancel" | rofi -theme "$ddir/confirm.rasi" -dmenu -selected-row 0)"
+	
+	case $chosen in
+		$confirm)
+			echo "yes"
+			;;
+		$cancel)
+			echo "no"
+			;;
+	esac
+}
+
+# Variable passed to rofi
+options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+
+chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
+case $chosen in
+    $shutdown)
+		ans=$(rdialog &)
+		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+			systemctl poweroff
+        else
+			exit
+        fi
+        ;;
+    $reboot)
+		ans=$(rdialog &)
+		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+			systemctl reboot
+        else
+			exit
+        fi
+        ;;
+    $lock)
+        sh $HOME/.dotfiles/system/lock.sh
+        ;;
+    $suspend)
+		ans=$(rdialog &)
+		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+			mpc -q pause
+			amixer set Master mute
+			sh $HOME/.local/bin/lock
+			systemctl suspend
+        else
+			exit
+        fi
+        ;;
+    $logout)
+		ans=$(rdialog &)
+		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+			bspc quit
+        else
+			exit
+        fi
+        ;;
+esac
+
