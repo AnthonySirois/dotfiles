@@ -28,7 +28,7 @@ This repository is a work in progress!
 - Font : Hack Nerd Font
   - [Website](https://www.nerdfonts.com)
   - [Zip](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.0/Hack.zip)
-- Icons : [Kora](https://github.com/bikass/kora)
+- Icons : [Nerd fonts symbols](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/NerdFontsSymbolsOnly.zip)
 - Theme : [Catppuccin](https://github.com/catppuccin/catppuccin)
 
 ## References
@@ -38,4 +38,3 @@ This repository is a work in progress!
   - Install script
 - [Vallen217's dotfiles](https://github.com/Vallen217/dotfiles)
   - Initial configurations for i3, polybar, eww (powermenu)
-  - General inspiration
