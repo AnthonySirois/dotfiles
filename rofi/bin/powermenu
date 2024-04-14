@@ -74,9 +74,8 @@ case $chosen in
     $suspend)
 		ans=$(rdialog &)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-			mpc -q pause
 			amixer set Master mute
-			sh $HOME/.local/bin/lock
+			sh $HOME/.dotfiles/system/suspend.sh
 			systemctl suspend
         else
 			exit
@@ -85,7 +84,7 @@ case $chosen in
     $logout)
 		ans=$(rdialog &)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-			bspc quit
+			loginctl kill-session self
         else
 			exit
         fi

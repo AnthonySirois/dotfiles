@@ -8,12 +8,8 @@ TEXT='#cdd6f4'
 WRONG='#f38ba8'
 VERIFYING='#fab387'
 
-# Pause notifications while the screen is locked
-# The --noform parameter in i3lock is necessary for pausing notifications
-dunstctl set-paused true
-
+# Without --nofork, otherwise it cannot suspend properly
 i3lock \
-  --nofork \
   --verif-text="Verifying" \
   --wrong-text="Incorrect password" \
   --noinput-text="No input" \
@@ -48,5 +44,3 @@ i3lock \
   --bar-count 278 \
   --bar-total-width $SCREEN_WIDTH+80 \
 # For some unknown reason, the screen width does not cover the whole screen
-
-dunstctl set-paused false
