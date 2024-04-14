@@ -179,11 +179,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-assign [class="opera"] $ws1
+assign [class="firefox"] $ws1
+# assign does not work for opera
+for_window [class="Opera"] move to workspace $ws1
 assign [class="discord"] $ws6
 assign [class="thunderbird"] $ws7
 assign [class="steam"] $ws9
-assign [class="spotify"] $ws10
+# assign does not work for spotify
+for_window [class="Spotify"] move to workspace $ws10
 
 set $main_screen DP-2
 set $off_screen DP-5
