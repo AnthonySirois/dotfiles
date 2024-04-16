@@ -11,6 +11,7 @@ This repository is a work in progress!
 - Status bar: [polybar](https://github.com/polybar/polybar)
 - Application Launcher: [rofi](https://github.com/davatorium/rofi)
 - Notifications: [dunst](https://github.com/dunst-project/dunst)
+- File manager : [thunar](https://docs.xfce.org/xfce/thunar/start)
 
 - Misc
   - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
@@ -18,10 +19,10 @@ This repository is a work in progress!
   - [polybar-spotify-module](https://github.com/mihirlad55/polybar-spotify-module)
   - [nitrogen](https://github.com/l3ib/nitrogen/)
   - [flameshot](https://flameshot.org)
-  - [eww](https://github.com/elkowar/eww)
   - [i3lock-color](https://github.com/Raymo111/i3lock-color)
   - [picom](https://github.com/yshui/picom)
   - [bottom](https://github.com/ClementTsang/bottom)
+  - [numlockx]
 
 ## Customization
 

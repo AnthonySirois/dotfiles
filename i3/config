@@ -17,6 +17,7 @@ exec --no-startup-id "$HOME/.dotfiles/polybar/polybar-start.sh"
 exec --no-startup-id picom --config ~/.picom.conf
 exec --no-startup-id dunst --config "$HOME/.dotfiles/dunst/dunstrc"
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id numlockx on
 
 
 # Start XDG autostart .desktop files using dex. See also
@@ -182,6 +183,7 @@ bindsym $mod+r mode "resize"
 assign [class="firefox"] $ws1
 # assign does not work for opera
 for_window [class="Opera"] move to workspace $ws1
+assign [class="obsidian"] $ws3
 assign [class="discord"] $ws6
 assign [class="thunderbird"] $ws7
 assign [class="steam"] $ws9
