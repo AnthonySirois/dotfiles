@@ -43,7 +43,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -77,8 +77,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Move workspace to other monitors
-bindsym $mod+Ctrl+greater move workspace to output right
-bindsym $mod+Ctrl+less move workspace to output left
+bindsym $mod+greater move workspace to output right
+bindsym $mod+less move workspace to output left
 
 # split in horizontal orientation
 bindsym $mod+u split horizontal
@@ -102,6 +102,9 @@ bindsym $mod+e layout toggle split
 
 # rofi power-menu
 bindsym $mod+p exec "$HOME/.config/rofi/bin/powermenu"
+
+# pause notifications
+bindsym $mod+n exec --no-startup-id dunstctl set-paused toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
