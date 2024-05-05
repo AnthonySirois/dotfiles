@@ -15,4 +15,4 @@
 [mergetool "vscode"]
         cmd = code --wait $MERGED
 [credential]
-	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+	helper = cache --timeout=3600
