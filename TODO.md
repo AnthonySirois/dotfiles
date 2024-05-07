@@ -1,0 +1,1 @@
+- [ ] Fix keyboard french/english switch
