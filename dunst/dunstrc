@@ -1,7 +1,7 @@
 [global]
     ### Display ###
     monitor = 0
-	follow = keyboard
+	follow = none
 
     ### Geometry ###
     width = (300, 500)

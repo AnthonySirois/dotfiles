@@ -23,7 +23,7 @@ This repository is a work in progress!
   - [picom](https://github.com/yshui/picom)
   - [bottom](https://github.com/ClementTsang/bottom)
   - [numlockx]
-  - [xautolock]
+  - [xidlehook](https://github.com/jD91mZM2/xidlehook/tree/master)
 
 ## Customization
 
