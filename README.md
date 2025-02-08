@@ -40,3 +40,14 @@ This repository is a work in progress!
   - Install script
 - [Vallen217's dotfiles](https://github.com/Vallen217/dotfiles)
   - Initial configurations for i3, polybar, eww (powermenu)
+
+## Install
+
+1. Install all programs (See program's website for installation guide)
+2. run `install.sh`
+3. Install `zsh` plugins found in `./zsh/config.zsh`
+4. Set `polybar` settings in `./polybar/settings.ini`
+5. Set screens in the bottom of `./i3/config`
+6. Set screen dimensions in `./system/lock.sh` and `./system/suspend.sh`
+7. Set the wallpaper using `nitrogen`
+8. Install the `catppuccin` cursors

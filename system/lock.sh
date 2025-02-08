@@ -3,9 +3,9 @@
 SCREEN_WIDTH=2560 
 SCREEN_HEIGHT=1440
 
-DEFAULT='#cba6f7'
+DEFAULT='#fab387'
 TEXT='#cdd6f4'
-WRONG='#f38ba8'
+WRONG='#ba2222'
 VERIFYING='#fab387'
 
 # Pause notifications while the screen is locked
