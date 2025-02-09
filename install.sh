@@ -114,6 +114,7 @@ install_dotfiles() {
     link_file "$DOTFILES_ROOT/rofi" "$CONFIG_ROOT/rofi"
     link_file "$DOTFILES_ROOT/bottom" "$CONFIG_ROOT/bottom"
     link_file "$DOTFILES_ROOT/gtk-3.0/settings.ini" "$CONFIG_ROOT/gtk-3.0/settings.ini"
+    link_file "$DOTFILES_ROOT/lazydocker" "$CONFIG_ROOT/lazydocker"
 }
 
 install_dotfiles
