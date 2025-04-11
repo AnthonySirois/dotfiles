@@ -12,3 +12,5 @@ alias cls="clear"
 alias path="echo -e ${PATH//:/'\n'}"
 alias py="python3"
 alias lzd="lazydocker"
+
+alias rf="rainfrog --driver postgres --username homestead --host 0.0.0.0 --port 5432"
