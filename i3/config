@@ -3,6 +3,12 @@ include catppuccin-mocha
 # i3 config file (v4)
 set $mod Mod4
 
+# Set screens
+set $main_screen HDMI-1
+set $off_screen eDP-1
+
+# exec --no-startup-id "$HOME/.screenlayout/hdmi1.sh"
+
 # gaps
 for_window [class=".*"] border pixel 1
 gaps inner 12
@@ -124,6 +130,7 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $temp_ws "temporary"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -148,6 +155,18 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# swap workspaces TODO Use variables (cannot because of quote "" in the variable values)
+bindsym $mod+Ctrl+1 exec --no-startup-id "$HOME/.dotfiles/i3/swap-workspaces.sh 1 temporary"
+bindsym $mod+Ctrl+2 exec --no-startup-id "$HOME/.dotfiles/i3/swap-workspaces.sh 2 temporary"
+bindsym $mod+Ctrl+3 exec --no-startup-id "$HOME/.dotfiles/i3/swap-workspaces.sh 3 temporary"
+bindsym $mod+Ctrl+4 exec --no-startup-id "$HOME/.dotfiles/i3/swap-workspaces.sh 4 temporary"
+bindsym $mod+Ctrl+5 exec --no-startup-id "$HOME/.dotfiles/i3/swap-workspaces.sh 5 temporary"
+bindsym $mod+Ctrl+6 exec --no-startup-id "$HOME/.dotfiles/i3/swap-workspaces.sh 6 temporary"
+bindsym $mod+Ctrl+7 exec --no-startup-id "$HOME/.dotfiles/i3/swap-workspaces.sh 7 temporary"
+bindsym $mod+Ctrl+8 exec --no-startup-id "$HOME/.dotfiles/i3/swap-workspaces.sh 8 temporary"
+bindsym $mod+Ctrl+9 exec --no-startup-id "$HOME/.dotfiles/i3/swap-workspaces.sh 9 temporary"
+bindsym $mod+Ctrl+0 exec --no-startup-id "$HOME/.dotfiles/i3/swap-workspaces.sh 10 temporary"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -186,15 +205,11 @@ bindsym $mod+r mode "resize"
 assign [class="firefox"] $ws1
 # assign does not work for opera
 for_window [class="Opera"] move to workspace $ws1
-assign [class="obsidian"] $ws3
+assign [class="obsidian"] $ws8
 assign [class="teams"] $ws6
 assign [class="thunderbird"] $ws7
-assign [class="steam"] $ws9
 # assign does not work for spotify
 for_window [class="Spotify"] move to workspace $ws10
-
-set $main_screen HDMI-1
-set $off_screen eDP-1
 
 workspace $ws1 output $main_screen
 workspace $ws2 output $main_screen
