@@ -8,6 +8,7 @@ TEXT='#cdd6f4'
 WRONG='#f38ba8'
 VERIFYING='#fab387'
 
+$HOME/.dotfiles/system/enable-screensaver.sh
 # Pause notifications while the screen is locked
 # The --noform parameter in i3lock is necessary for pausing notifications
 dunstctl set-paused true
@@ -50,3 +51,4 @@ i3lock \
 # For some unknown reason, the screen width does not cover the whole screen
 
 dunstctl set-paused false
+$HOME/.dotfiles/system/disable-screensaver.sh

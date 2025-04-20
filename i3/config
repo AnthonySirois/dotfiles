@@ -26,6 +26,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 exec --no-startup-id nm-applet
 exec --no-startup-id "$HOME/.dotfiles/system/start-autolock.sh"
+exec --no-startup-id "$HOME/.dotfiles/system/disable-screensaver.sh"
 
 # Screenshots (using Flameshot)
 bindsym Print exec --no-startup-id flameshot gui
@@ -193,8 +194,8 @@ assign [class="steam"] $ws9
 # assign does not work for spotify
 for_window [class="Spotify"] move to workspace $ws10
 
-set $main_screen DP-2
-set $off_screen DP-5
+set $main_screen DisplayPort-0
+set $off_screen DisplayPort-1
 
 workspace $ws1 output $main_screen
 workspace $ws2 output $main_screen
